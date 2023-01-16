@@ -1,0 +1,68 @@
+*{
+    margin:0;
+    padding:0;
+}
+/* 
+    START
+    업&다운 숫자 맞추기 게임 
+*/
+.upndown-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+.upndown-wrap .game-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: coral;
+    color:#fff;
+    font-size: 18px;
+}
+.upndown-wrap h1{
+    padding-bottom: 20px;
+}
+.upndown-wrap .info-txt #chance{
+    font-weight: bold;
+    color:coral;
+    font-size: 20px;
+}
+.upndown-wrap .txt-disabled,
+.upndown-wrap .txt-disabled #chance{
+    color:#eee
+}
+.upndown-wrap .ipt{
+    border:solid 1px #fff;
+    height: 20px;
+    padding:4px;
+    border-radius: 3px;
+}
+.upndown-wrap .result-txt{
+    padding-bottom: 10px;
+}
+.upndown-wrap .ipt-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.upndown-wrap .ipt-group #play-btn{
+    margin-left: 4px;
+    margin-right: 4px;
+}
+.upndown-wrap .ipt-group button{
+    border:none;
+    border-radius: 3px;
+    height: 30px;
+    width: 50px;
+}
+/* 
+    END
+    업&다운 숫자 맞추기 게임 
+*/

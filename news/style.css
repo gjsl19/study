@@ -1,0 +1,104 @@
+body,
+ul {
+  padding: 0;
+  margin: 0;
+}
+a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: inherit;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+li {
+  list-style: none;
+}
+.container {
+  width: 100%;
+  max-width: 1024px;
+  padding: 40px 24px;
+}
+.container header .title {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+}
+header {
+  position: sticky;
+  top: -46px;
+  z-index: 99;
+}
+.menus {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fff;
+  padding: 32px 0;
+}
+.menus button {
+  border: none;
+  background: none;
+  border-bottom: solid 1px transparent;
+}
+.menus button:hover {
+  border-bottom: solid 1px;
+}
+.articles-wrap {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.list-articles {
+  container-type: inline-size;
+  container-name: articlesList;
+}
+.list-articles .news-img {
+  height: 150px;
+  overflow: hidden;
+}
+.list-articles .news-img img {
+  object-fit: contain;
+}
+.list-articles .articles-item {
+  display: grid;
+  grid-template-columns: 35% 1fr;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: solid 1px gray;
+}
+@container articlesList (max-width: 720px) {
+  .list-articles .articles-item {
+    grid-template-columns: 1fr;
+  }
+}
+.articles-box {
+  padding: 10px 24px 24px;
+  text-align: left;
+}
+.articles-box div {
+  text-align: right;
+}
+.articles-box .title {
+  font-size: 24px;
+  font-weight: bold;
+}
+.articles-box .content {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  font-size: 18px;
+  line-height: 1.5;
+}
+.articles-box .date,
+.articles-box .writer {
+  font-size: 13px;
+}
+footer {
+  text-align: center;
+}
