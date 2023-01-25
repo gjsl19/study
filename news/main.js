@@ -11,8 +11,8 @@ const getLatestNews = async () => {
   let url = new URL(
     `https://newsapi.org/v2/top-headlines?country=us&apiKey=e556f84eaf3f41129a1cc6bce089b6fb`
   );
-  // let header = new Headers({ "X-Api-Key": "e556f84eaf3f41129a1cc6bce089b6fb" });
-  let response = await fetch(url);
+  let header = new Headers({ "X-Api-Key": "e556f84eaf3f41129a1cc6bce089b6fb" });
+  let response = await fetch(url, { Headers: header });
   let data = await response.json();
   news = data.articles;
   console.log(news);
