@@ -1,24 +1,22 @@
 let news = [];
-
 let menus = document.querySelectorAll(".menus button");
+
+console.log(location.origin);
+
 menus.forEach((menu) =>
   menu.addEventListener("click", () => getNewsByTopic(event))
 );
 
 const getLatestNews = async () => {
   let url = new URL(
-    "https://newsapi.org/v2/everything?q=tesla&from=2023-01-13&sortBy=publishedAt&apiKey=e556f84eaf3f41129a1cc6bce089b6fb"
-    // "https://api.newscatcherapi.com/v2/latest_headlines?countries=kr&topic=business&page_size=10"
+    `https://newsapi.org/v2/top-headlines?country=us&apiKey=e556f84eaf3f41129a1cc6bce089b6fb`
   );
-  let header = new Headers({
-    "x-api-key": "e556f84eaf3f41129a1cc6bce089b6fb",
-  });
-
-  let response = await fetch(url, { headers: header });
+  // let header = new Headers({ "X-Api-Key": "e556f84eaf3f41129a1cc6bce089b6fb" });
+  let response = await fetch(url);
   let data = await response.json();
   news = data.articles;
+  console.log(news);
 
-  console.log(response);
   render();
 };
 const getNewsByTopic = (event) => {
