@@ -14,10 +14,6 @@ const getLatestNews = async () => {
     console.log(response);
     // response.json();
   });
-
-  // let data = await response.json();
-  // console.log(data);
 };
 getLatestNews();
-
 console.log(location.origin);
