@@ -3,19 +3,20 @@ let menus = document.querySelectorAll(".menus button");
 
 console.log(location.origin);
 
-menus.forEach((menu) =>
-  menu.addEventListener("click", () => getNewsByTopic(event))
-);
-
 const getLatestNews = async () => {
-  let url = new URL(
-    `https://newsapi.org/v2/top-headlines?country=us&apiKey=e556f84eaf3f41129a1cc6bce089b6fb`
-  );
-  let header = new Headers({ "X-Api-Key": "e556f84eaf3f41129a1cc6bce089b6fb" });
-  let response = await fetch(url, { Headers: header });
-  let data = await response.json();
-  news = data.articles;
-  console.log(news);
+  let url =
+    "https://newsapi.org/v2/everything?" +
+    "q=Apple&" +
+    "from=2022-05-19&" +
+    "sortBy=popularity&" +
+    "apiKey=e556f84eaf3f41129a1cc6bce089b6fb";
+
+  let req = new Request(url);
+
+  fetch(req)
+    .then((response) => response.json())
+    .then((data) => console.log(data));
+  // console.log(data);
 
   render();
 };
@@ -25,7 +26,7 @@ const getNewsByTopic = (event) => {
 
 const render = () => {
   let newsHTML = "";
-
+  console.log(newsHTML);
   newsHTML = news
     .map((item) => {
       return `<div class="articles-item">
