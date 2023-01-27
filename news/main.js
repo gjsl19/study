@@ -4,19 +4,23 @@ let menus = document.querySelectorAll(".menus button");
 console.log(location.origin);
 
 const getLatestNews = async () => {
-  let url =
-    "https://newsapi.org/v2/everything?" +
-    "q=Apple&" +
-    "from=2022-05-19&" +
-    "sortBy=popularity&" +
-    "apiKey=e556f84eaf3f41129a1cc6bce089b6fb";
+  const apiKey = "e556f84eaf3f41129a1cc6bce089b6fb";
+  let url = `https://newsapi.org/v2/everything?q=top-headlines?country=us&apiKey=${apiKey}`;
+  fetch(url)
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      data.articles.forEach((article) => {
+        console.log("kekeke");
+      });
+    });
 
-  let req = new Request(url);
-
-  fetch(req)
-    .then((response) => response.json())
-    .then((data) => console.log(data));
-  // console.log(data);
+  // let header = new Headers({ "X-Api-Key": "e556f84eaf3f41129a1cc6bce089b6fb" });
+  // let response = await fetch(url);
+  // let data = await response.json();
+  // news = data.articles;
+  // console.log(news);
 
   render();
 };
@@ -25,30 +29,7 @@ const getNewsByTopic = (event) => {
 };
 
 const render = () => {
-  let newsHTML = "";
-  console.log(newsHTML);
-  newsHTML = news
-    .map((item) => {
-      return `<div class="articles-item">
-      <a href="${item.url}">
-    <figure class="news-img">
-      <img
-        src="${item.urlToImage}"
-      />
-    </figure></a>
-    <a href="${item.url}">
-    <div class="articles-box">
-      <h2 class="title">${item.title}</h2>
-      <p class="content">${item.content}</p>
-      <div>
-        <span class="date">${item.source.name}</span>
-        <span class="writer">${item.author}</span>
-      </div>
-    </div></a>
-  </div>`;
-    })
-    .join("");
-
-  document.getElementById("listArticles").innerHTML = newsHTML;
+  const newsHTML = document.getElementById("listArticles");
+  newsHTML.innerHTML = "";
 };
 getLatestNews();
