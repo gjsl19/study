@@ -1,35 +1,23 @@
-let news = [];
-let menus = document.querySelectorAll(".menus button");
-
-console.log(location.origin);
-
 const getLatestNews = async () => {
-  const apiKey = "e556f84eaf3f41129a1cc6bce089b6fb";
-  let url = `https://newsapi.org/v2/everything?q=top-headlines?country=us&apiKey=${apiKey}`;
-  fetch(url)
-    .then((res) => {
-      return res.json();
-    })
-    .then((data) => {
-      data.articles.forEach((article) => {
-        console.log("kekeke");
-      });
-    });
+  // let url = new URL(`http://eventregistry.org/api/v1/article/getArticles`);
+  // let header = new Headers({
+  //   apiKey: "74117c8d-284a-462f-97b3-480f8908d2d3",
+  // });
+  await fetch(
+    "http://eventregistry.org/api/v1/article/getArticles?apiKey=74117c8d-284a-462f-97b3-480f8908d2d3",
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ title: "Test", body: "hello", userId: 1 }),
+    }
+  ).then((response) => {
+    console.log(response);
+    // response.json();
+  });
 
-  // let header = new Headers({ "X-Api-Key": "e556f84eaf3f41129a1cc6bce089b6fb" });
-  // let response = await fetch(url);
   // let data = await response.json();
-  // news = data.articles;
-  // console.log(news);
-
-  render();
-};
-const getNewsByTopic = (event) => {
-  console.log("click", EventTarget);
-};
-
-const render = () => {
-  const newsHTML = document.getElementById("listArticles");
-  newsHTML.innerHTML = "";
+  // console.log(data);
 };
 getLatestNews();
+
+console.log(location.origin);
