@@ -21,35 +21,65 @@
   <body>
     <section class="container">
       <header>
-        <h1 class="title">HAZEL NEWS</h1>
-        <div class="menus" id="menus">
-          <!-- <button>menu1</button>
-          <button>menu2</button>
-          <button>menu3</button>
-          <button>menu4</button>
-          <button>menu5</button> -->
+        <div class="header-wrap">
+          <h1 class="title">HAZEL NEWS</h1>
+
+          <div class="srch-wrap">
+            <div class="srch-box">
+              <input
+                type="text"
+                id="serch-input"
+                placeholder="키워드를 입력하세요"
+              />
+              <button id="srch-btn">검색</button>
+            </div>
+          </div>
+          <div class="menus">
+            <button>business</button>
+            <button>entertainment</button>
+            <button>general</button>
+            <button>health</button>
+            <button>science</button>
+            <button>sports</button>
+            <button>technology</button>
+          </div>
         </div>
       </header>
       <div class="articles-wrap">
         <div id="listArticles" class="list-articles">
-          <div class="articles-item">
-            <figure class="news-img">
-              <img
-                src="https://i.pinimg.com/736x/70/b2/36/70b23655c178ef0caf2d3bc3c261b25e.jpg"
-              />
-            </figure>
+          <!-- <div class="articles-item">
+            <a href="">
+              <figure class="news-img">
+                <img
+                  src="https://i.pinimg.com/736x/70/b2/36/70b23655c178ef0caf2d3bc3c261b25e.jpg"
+                />
+              </figure>
+            </a>
+
             <div class="articles-box">
-              <h2 class="title">title</h2>
+              <a href=""><h2 class="title">title</h2></a>
               <p class="content">content</p>
               <div>
                 <span class="date">date</span>
               </div>
             </div>
-          </div>
+          </div> -->
           <!-- END articles-item -->
         </div>
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+        </nav>
         <!-- END listArticles -->
       </div>
+
       <footer>by Hazel</footer>
     </section>
 
