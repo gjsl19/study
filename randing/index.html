@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>페이워치 사용방법</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- <script src="./js/p5.min.js"></script>
+    <script src="./js/sketch.js"></script> -->
+  </head>
+  <body>
+    <header>
+      <h1>paywatch logo</h1>
+      <div class="btn-close">close</div>
+    </header>
+    <section>
+      <div class="slide-wrap">
+        <div class="slide-view slide01">content111</div>
+        <div class="slide-view slide02">content222</div>
+        <div class="slide-view slide03">content333</div>
+        <div class="slide-view slide04">content444</div>
+        <div class="slide-view slide05">content555</div>
+        <div class="slide-view slide06">content666</div>
+      </div>
+    </section>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <script
+      type="text/javascript"
+      src="http://code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script>
+      const mySlide = $(".slide-wrap");
+
+      mySlide.on("init", function (event, slick) {
+        var dots = $(".slick-dots li");
+        dots.each(function (k, v) {
+          $(this)
+            .find("button")
+            .addClass("heading" + k);
+        });
+        var items = slick.$slides;
+        items.each(function (k, v) {
+          var text = $(this).text();
+          $(".heading" + k).text(text);
+        });
+      });
+      mySlide.slick({
+        infinite: false,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: true,
+        centerPadding: 0,
+        variableWidth: true,
+        dots: true,
+        arrows: false,
+        draggable: false,
+      });
+
+      mySlide.on("wheel", function (e) {
+        e.preventDefault();
+
+        if (e.originalEvent.deltaY > 0) {
+          $(this).slick("slickNext");
+        } else {
+          $(this).slick("slickPrev");
+        }
+      });
+    </script>
+  </body>
+</html>
