@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+/* reset */
 *,
 *:before,
 *:after {
@@ -327,9 +328,110 @@ img:active {
 ::placeholder {
   color: #ccc;
 }
+/* style */
+#header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-width: 280px;
+  height: 100px;
+  background: white;
+  z-index: 99;
+}
+.header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  max-width: 1284px;
+  height: 100%;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+.btn-app-down {
+  cursor: pointer;
+}
+.btn-app-down i {
+  margin-left: 4px;
+}
+.pop-wrap {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  /* display: none; */
+  opacity: 0;
+  transition: all ease 0.25s 0s;
+  visibility: hidden;
+}
+.pop-wrap.active {
+  visibility: visible;
+  transition: all ease 0.25s 0s;
+  opacity: 1;
+}
+#dim {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+}
+.pop-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 1001;
+}
+.pop_layer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: calc(100% - 60px);
+  max-width: 500px;
+  border-radius: 25px;
+  padding: 60px 40px;
+  background-color: #fff;
+}
+.pop_layer.appdown h3 {
+  font-size: 22px;
+  font-weight: bold;
+  padding-bottom: 24px;
+}
+.pop_layer.appdown .down-img {
+  width: 100px;
+  margin-bottom: 48px;
+}
+.pop_layer.appdown .url-box {
+  width: 100%;
+  margin-bottom: 36px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+.pop_layer.appdown .url-box input {
+  width: 240px;
+}
+.pop_layer.appdown p {
+  line-height: 24px;
+  font-size: 14px;
+}
+#menu .active {
+  font-weight: bold;
+}
 .slide-wrap {
   width: 100%;
-  height: 800px;
+  height: calc(100vh - 100px);
 }
 .slick-list {
   width: 100%;
@@ -394,11 +496,72 @@ img:active {
 .slide-wrap .slick-dots li button:before {
   display: none;
 }
-header {
-  height: 60px;
-}
 .btn-close {
   position: absolute;
   top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  font-size: 0;
+  background: url(../images/close.png) no-repeat center / 100% auto;
+  cursor: pointer;
+}
+.layer-item-wrap {
+  display: flex;
+  justify-content: center;
+}
+.layer-item {
+  background-color: #fff;
+  border-radius: 15px;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+.item-group {
+  visibility: hidden;
+  transform: translateY(100%);
+}
+.item-group.active {
+  visibility: visible;
+  transform: translateY(0%);
+  transition: all ease 0.5s 0s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  padding-top: 100px;
+  background-color: #fff;
+}
+.item-layer-wrap header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-width: 280px;
+  height: 100px;
+}
+.fp-right li:nth-child(3) a {
+  height: 40px !important;
+  width: 120px !important;
+  top: 0;
+  left: -100px;
+  background: #fff !important;
+  z-index: 2 !important;
+}
+.fp-right li:nth-child(3) a + .fp-tooltip {
+  width: auto !important;
+  opacity: 1 !important;
+  color: #000 !important;
+  z-index: 1;
+}
+.fp-right li:nth-child(3) a span {
+  display: none;
+}
+.btn-contact {
+  position: absolute;
+  bottom: 40px;
   right: 40px;
+  background-color: red;
 }
