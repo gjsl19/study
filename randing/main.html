@@ -44,10 +44,10 @@
             <a href="#firstPage">홈</a>
           </li>
           <li data-menuanchor="secondPage">
-            <a href="#secondPage">페이워치란</a>
+            <a href="#secondPage">서비스 소개</a>
           </li>
           <li data-menuanchor="3rdPage">
-            <a href="#3rdPage">기업도입 문의</a>
+            <a href="#3rdPage">고객센터</a>
           </li>
         </ul>
         <div class="btn-app-down" id="app-down">
@@ -93,16 +93,19 @@
         <div class="section" id="section1">
           <h1>풀 레이어로 띄우기</h1>
           <div class="layer-item-wrap">
-            <div class="layer-item" id="itemOpen01">서비스안내,뉴스</div>
+            <div class="layer-item" id="itemOpen01">
+              서비스안내,뉴스,글로벌사이트 이동,
+            </div>
             <div class="layer-item" id="itemOpen02">가입방법</div>
             <div class="layer-item" id="itemOpen03">사용방법</div>
           </div>
         </div>
         <div class="section" id="section2">
-          <h1>기업도입문의,글로벌사이트 이동,푸터</h1>
+          <h1>기업도입문의,고객센터,자주묻는질문,푸터</h1>
         </div>
       </div>
     </section>
+    <a href="#3rdPage" class="btn-contact">기업도입 문의</a>
     <!-- END container -->
     <section id="item-first" class="item-group">
       <div class="item-layer-wrap">
@@ -146,17 +149,11 @@
     <script type="text/javascript">
       // 메인 풀페이지 설정
       let myFullpage = new fullpage("#fullpage", {
-        sectionsColor: [
-          "#1bbc9b",
-          "#4BBFC3",
-          "#7BAABE",
-          "whitesmoke",
-          "#ccddff",
-        ],
+        sectionsColor: ["#1bbc9b", "#4BBFC3", "#7BAABE"],
         anchors: ["firstPage", "secondPage", "3rdPage"],
         // navigation: true,
-        // navigationTooltips: ["Page 1", "Page 2", "Page 3"],
-        showActiveTooltip: true,
+        // navigationTooltips: ["", "", "기업도입 문의"],
+        // showActiveTooltip: true,
         menu: "#menu",
       });
       // 메인 앱 다운버튼 클릭시 레이어팝업

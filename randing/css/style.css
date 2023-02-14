@@ -542,3 +542,26 @@ img:active {
   min-width: 280px;
   height: 100px;
 }
+.fp-right li:nth-child(3) a {
+  height: 40px !important;
+  width: 120px !important;
+  top: 0;
+  left: -100px;
+  background: #fff !important;
+  z-index: 2 !important;
+}
+.fp-right li:nth-child(3) a + .fp-tooltip {
+  width: auto !important;
+  opacity: 1 !important;
+  color: #000 !important;
+  z-index: 1;
+}
+.fp-right li:nth-child(3) a span {
+  display: none;
+}
+.btn-contact {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  background-color: red;
+}
