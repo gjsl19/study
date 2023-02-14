@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="paywatch korea" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+    <meta name="description" content="사이트 설명" />
+    <meta name="robots" content="..., ..." />
+    <meta name="keywords" content="..., ..." />
+    <meta name="og:site_name" content="페이워치 사이트" />
+    <meta name="og:title" content="메타 태그를 통한 검색엔진 최적화" />
+    <meta
+      name="og:description"
+      content="기계가 웹페이지를 효과적으로 이해할 수 있도록 사용하는 메타 태그에 대해서 알아보겠습니다."
+    />
+    <meta name="og:url" content="https://www.daleseo.com/html-meta" />
+    <meta
+      name="og:image"
+      content="https://www.daleseo.com/html-meta/thumbnail.png"
+    />
+    <title>페이워치</title>
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/fullpage.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <script
+      src="https://kit.fontawesome.com/be3240fe6b.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script src="./js/p5.min.js"></script>
+    <script src="./js/sketch.js"></script> -->
+  </head>
+  <body>
+    <header id="header">
+      <div class="header-wrap">
+        <h1>paywatch logo</h1>
+        <ul id="menu">
+          <li data-menuanchor="firstPage" class="active">
+            <a href="#firstPage">홈</a>
+          </li>
+          <li data-menuanchor="secondPage">
+            <a href="#secondPage">페이워치란</a>
+          </li>
+          <li data-menuanchor="3rdPage">
+            <a href="#3rdPage">기업도입 문의</a>
+          </li>
+        </ul>
+        <div class="btn-app-down" id="app-down">
+          APP<i class="far fa-arrow-alt-circle-down"></i>
+        </div>
+        <!-- pop-wrap 앱 다운하는 레이어 -->
+        <section class="pop-wrap" id="pop-wrap">
+          <div id="dim"></div>
+          <div class="pop-container">
+            <div class="pop_layer appdown">
+              <div class="btn-close">close</div>
+              <h3>페이워치 APP 사용하기</h3>
+              <img
+                src="https://static.wixstatic.com/media/a0c72e_ed08e690fc8f4c59bf4d28761af7f404~mv2.png/v1/fill/w_200,h_200,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Group%20690.png"
+                alt="app down qrcode"
+                class="down-img"
+              />
+              <a href="" class="down-link">다운받기</a>
+
+              <h3>페이워치 APP 설치 URL 보내기</h3>
+              <div class="url-box">
+                <input
+                  type="number"
+                  placeholder="휴대폰번호를 '-' 없이 입력해 주세요"
+                /><button>동의 후 전송</button>
+              </div>
+              <p>APP 설치 URL 전송을 위해 고객님 휴대폰 번호를 수집합니다.</p>
+              <p>수집된 정보는 문자 발송 완료 후 즉시 삭제됩니다.</p>
+            </div>
+          </div>
+        </section>
+        <!-- END pop-wrap 앱 다운하는 레이어 -->
+      </div>
+    </header>
+    <section class="container">
+      <div id="fullpage">
+        <div class="section" id="section0">
+          <div class="intro">
+            <h1>메인 내용</h1>
+            <p>-</p>
+          </div>
+        </div>
+        <div class="section" id="section1">
+          <h1>풀 레이어로 띄우기</h1>
+          <div class="layer-item-wrap">
+            <div class="layer-item" id="itemOpen01">서비스안내,뉴스</div>
+            <div class="layer-item" id="itemOpen02">가입방법</div>
+            <div class="layer-item" id="itemOpen03">사용방법</div>
+          </div>
+        </div>
+        <div class="section" id="section2">
+          <h1>기업도입문의,글로벌사이트 이동,푸터</h1>
+        </div>
+      </div>
+    </section>
+    <!-- END container -->
+    <section id="item-first" class="item-group">
+      <div class="item-layer-wrap">
+        <header>
+          <div class="btn-close">close</div>
+        </header>
+        <div class="slide-wrap">
+          <div class="slide-view slide01">
+            <span class="menu-tit">content111</span>
+          </div>
+          <div class="slide-view slide02">
+            <span class="menu-tit">content222</span>
+          </div>
+          <div class="slide-view slide03">
+            <span class="menu-tit">content333</span>
+          </div>
+          <div class="slide-view slide04">
+            <span class="menu-tit">content444</span>
+          </div>
+          <div class="slide-view slide05">
+            <span class="menu-tit">content555</span>
+          </div>
+          <div class="slide-view slide06">
+            <span class="menu-tit">content666</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="item-second" class="item-group"></section>
+    <section id="item-3rd" class="item-group"></section>
+
+    <script type="text/javascript" src="./js/fullpage.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./css/slick-theme.css" />
+    <script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
+    <script
+      type="text/javascript"
+      src="./js/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script type="text/javascript" src="./js/slick.min.js"></script>
+    <script type="text/javascript">
+      // 메인 풀페이지 설정
+      let myFullpage = new fullpage("#fullpage", {
+        sectionsColor: [
+          "#1bbc9b",
+          "#4BBFC3",
+          "#7BAABE",
+          "whitesmoke",
+          "#ccddff",
+        ],
+        anchors: ["firstPage", "secondPage", "3rdPage"],
+        // navigation: true,
+        // navigationTooltips: ["Page 1", "Page 2", "Page 3"],
+        showActiveTooltip: true,
+        menu: "#menu",
+      });
+      // 메인 앱 다운버튼 클릭시 레이어팝업
+      let appDownBtn = document.getElementById("app-down");
+      let popWrap = document.getElementById("pop-wrap");
+      let popCloseBtn = document.querySelectorAll(".btn-close");
+      let itemBtn01 = document.getElementById("itemOpen01");
+      let itemFirst = document.getElementById("item-first");
+
+      appDownBtn.addEventListener("click", popOpen);
+
+      popCloseBtn.forEach((target) =>
+        target.addEventListener("click", popClose)
+      );
+      itemBtn01.addEventListener("click", layerOpen);
+
+      function popOpen() {
+        popWrap.className += " active";
+      }
+      function popClose() {
+        popWrap.classList.remove("active");
+        itemFirst.classList.remove("active");
+      }
+
+      function layerOpen() {
+        itemFirst.className += " active";
+      }
+      // 상세페이지 > 전체레이어
+      const mySlide = $(".slide-wrap");
+
+      mySlide.on("init", function (event, slick) {
+        var dots = $(".slick-dots li");
+        dots.each(function (k, v) {
+          $(this)
+            .find("button")
+            .addClass("heading" + k);
+        });
+        var items = slick.$slides;
+        items.each(function (k, v) {
+          var text = $(this).find(".menu-tit").text();
+          $(".heading" + k).text(text);
+        });
+      });
+      mySlide.slick({
+        infinite: false,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: true,
+        centerPadding: 0,
+        variableWidth: true,
+        dots: true,
+        arrows: false,
+        draggable: false,
+      });
+
+      mySlide.on("wheel", function (e) {
+        e.preventDefault();
+
+        if (e.originalEvent.deltaY > 0) {
+          $(this).slick("slickNext");
+        } else {
+          $(this).slick("slickPrev");
+        }
+      });
+    </script>
+  </body>
+</html>
