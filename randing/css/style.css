@@ -287,9 +287,6 @@ textarea {
 }
 input,
 textarea {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   -webkit-user-select: initial;
   -khtml-user-select: initial;
   -moz-user-select: initial;
@@ -339,15 +336,17 @@ img:active {
   background: white;
   z-index: 99;
 }
-.header-wrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.inner-wrap {
   position: relative;
   max-width: 1284px;
   height: 100%;
   padding: 0 30px;
   margin: 0 auto;
+}
+.flex-bet-c {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .btn-app-down {
   cursor: pointer;
@@ -561,4 +560,40 @@ img:active {
   bottom: 40px;
   right: 40px;
   background-color: red;
+}
+.sns-group {
+  position: absolute;
+  bottom: 15%;
+  left: 40px;
+}
+.sns-group a {
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+}
+.sec02.fp-table {
+  justify-content: flex-end;
+}
+.sec02 .inner-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100vh - 100px);
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.ft-copy {
+  display: block;
+}
+.ft-top {
+  display: flex;
+  height: 100%;
+  text-align: center;
+}
+.ft-top h1 {
+  font-size: 48px;
+  font-weight: bold;
+}
+.btn-faq {
+  background-color: #fff;
 }
