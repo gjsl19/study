@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>페이워치 사용방법</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- <script src="./js/p5.min.js"></script>
+    <script src="./js/sketch.js"></script> -->
+  </head>
+  <body>
+    <header>
+      <h1>paywatch logo</h1>
+      <div class="btn-close">close</div>
+    </header>
+    <section>
+      <div class="slide-wrap">
+        <div class="slide-view slide01">
+          <span class="menu-tit">content111</span>
+        </div>
+        <div class="slide-view slide02">
+          <span class="menu-tit">content222</span>
+        </div>
+        <div class="slide-view slide03">
+          <span class="menu-tit">content333</span>
+        </div>
+        <div class="slide-view slide04">
+          <span class="menu-tit">content444</span>
+        </div>
+        <div class="slide-view slide05">
+          <span class="menu-tit">content555</span>
+        </div>
+        <div class="slide-view slide06">
+          <span class="menu-tit">content666</span>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const mySlide = $(".slide-wrap");
+
+      mySlide.on("init", function (event, slick) {
+        var dots = $(".slick-dots li");
+        dots.each(function (k, v) {
+          $(this)
+            .find("button")
+            .addClass("heading" + k);
+        });
+        var items = slick.$slides;
+        items.each(function (k, v) {
+          var text = $(this).find(".menu-tit").text();
+          $(".heading" + k).text(text);
+        });
+      });
+      mySlide.slick({
+        infinite: false,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: true,
+        centerPadding: 0,
+        variableWidth: true,
+        dots: true,
+        arrows: false,
+        draggable: false,
+      });
+
+      mySlide.on("wheel", function (e) {
+        e.preventDefault();
+
+        if (e.originalEvent.deltaY > 0) {
+          $(this).slick("slickNext");
+        } else {
+          $(this).slick("slickPrev");
+        }
+      });
+    </script>
+  </body>
+</html>
