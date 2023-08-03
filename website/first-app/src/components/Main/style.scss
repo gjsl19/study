@@ -1,0 +1,14 @@
+@import "../../App.scss";
+
+.container01 {
+  background-color: lightblue;
+  padding: 0 30px;
+  height: 800px;
+  position: relative;
+  z-index: 1;
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: $Gray800;
+  }
+}

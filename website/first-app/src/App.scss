@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+$White: #fff;
+$Black: #000;
+$Gray900: #111827;
+$Gray800: #1f2937;
+$Gray700: #374151;
+$Gray600: #4b5563;
+$Gray500: #616877;
+$Gray400: #848c9c;
+$Gray300: #a6acb8;
+$Gray200: #bdc2cc;
+$Gray100: #dde1e8;
+$Gray50: #f3f6f9;
+$Red500: #f01515;
+$Primary500: #1ce6b0;
+$Sub500: #5c7aea;
+$regular: 400;
+$medium: 600;
+$bold: 700;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
