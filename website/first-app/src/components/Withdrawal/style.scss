@@ -1,0 +1,10 @@
+@import "../../App.scss";
+
+.withdrawal-wrap {
+  background: burlywood;
+  height: 800px;
+
+  @media screen and (max-width: 768px) {
+    padding: 100px 0;
+  }
+}

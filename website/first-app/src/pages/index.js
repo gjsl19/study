@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import Main from "../components/Main";
-import Main02 from "../components/Main02";
+import Withdrawal from "../components/Withdrawal";
+import Repay from "../components/Repay";
+import { homeObjOne, homeObjTwo, homeObjThree } from "../components/Data";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,8 +20,9 @@ const Home = () => {
     <>
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
-      <Main />
-      <Main02 />
+      <Main {...homeObjOne} />
+      <Withdrawal {...homeObjTwo} />
+      <Repay {...homeObjThree} />
     </>
   );
 };
