@@ -11,6 +11,15 @@
   @media screen and (max-width: 768px) {
     padding: 100px 0;
   }
+  .Parallax {
+    position: absolute;
+    &.p-yes {
+      left: 50%;
+    }
+    &.p-no {
+      left: 50%;
+    }
+  }
   .group {
     position: relative;
     text-align: center;
@@ -20,11 +29,16 @@
       font-size: 30px;
       strong {
         display: block;
-        font-size: 5rem;
+        font-size: 60px;
       }
+      padding-bottom: 48px;
     }
     h2 {
       font-size: 30px;
+      padding-bottom: 20px;
+    }
+    .txt01 {
+      font-size: 18px;
     }
   }
 
